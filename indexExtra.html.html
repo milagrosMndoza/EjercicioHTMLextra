@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicio Extra</title>
+    </head>
+    <body style = " background:#3AB4ED">
+        <h1><b>Convertidor Celsius</b></h1>
+        <table align="center">
+        <table WIDTH=500 border=7 >
+            <tr>
+                <td><b>Celsius</b></td>
+                <td><p><input id="c" onkeyup="convert('C')"></p></td>
+            </tr>
+            <tr>
+                <td><b>Convertir a Farenheit</b></td> <br>
+                <td> <p><input id="f" onkeyup="convert('F')"></p></td>
+            </tr>
+        </table>
+    <script>
+       function convert(numero) {
+    var grados;
+    if (numero == "C") {
+        grados = document.getElementById("c").value * 9 / 5 + 32;
+        document.getElementById("f").value = grados.toFixed(2);
+    } else {
+        grados = (document.getElementById("f").value -32) * 5 / 9;
+        document.getElementById("c").value = grados.toFixed(2);
+    }
+}
+        </script>
+    </body>
+</html>
